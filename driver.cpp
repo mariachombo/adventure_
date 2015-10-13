@@ -16,7 +16,28 @@ double discount(int num, double total);
 
 int main()
 {
+    int num;
+    int price;
+    cout << "\n\t_____________________________________________________\n\n";
+    cout << "\n\t\t￣ᴥ￣Welcome to Vacation Oasis!￣ᴥ￣\n\n";
+    cout << "How many people are you planning on taking with you? ";
+    cin >> num;
+    char choice = menu();
+
     return 0;   
+}
+
+char menu(){ 
+
+    char choice;
+
+    cout << "Would you like to go to Devil's Courthouse Adventure Weekend (enter 'D')" <<endl; 
+    cout << "Would you like to go to Bahama Scuba (enter 'B')" <<endl;
+    cout << "Would you like to go to Colorado Sky Dive (enter 'C')" <<endl;  
+    cout << "Would you like to go to Spelunk Barron Cliff (enter 'S')\nYour Choice: ";  
+    cin >> choice; 
+     
+    return choice; 
 }
 
 double discount(int num, double total)
@@ -55,18 +76,6 @@ double skyDive(int num) //this function calculates the total amount
     }
     return discount(num, total); //call the discount function to see if they are eligible for a discount.
  }
-char menu(){ 
-
-    char choice;
-
-    cout << "Would you like to go to Devil's Courthouse Adventure Weekend enter D" <<endl; 
-    cout << "Would you like to go to Bahama Scuba enter B" <<endl;
-    cout << "Would you like to go to Colorado Sky Dive enter C" <<endl;  
-    cout << "Would you like to go to Spelunk Barron Cliff enter S" <<endl;  
-    cin >> choice; 
-    
-    return choice; 
-}
 
 double spelunk(int num){
 
@@ -95,34 +104,34 @@ double climbing(int num)
     char ans;
     double total = 350 * num;
      
-     cout << "Would you like an instructor (y/n) \n" << endl;
+     cout << "Would you like an instructor (y/n) \n";
      cin >> ans;
      
      if(ans == 'y')
     {
         total +=  instructor  * num;     
     }
-    cout << " Would you like equipment (y/n)\n" << endl;
+    cout << " Would you like equipment (y/n)\n";
     cin >> ans;
     if (ans == 'y')
-    {
+    {   
         total += equipmentRental * num;
     }
     
-    return total;
+    return discount(num, total);
 }
 double scuba(int num)
 {
     int instructor = 100;
     char ans;
-    double total = 10000 * num;
+    double total = 1000 * num;
     
-        cout << "Would you like an instructor (y/n)? \n" << endl; 
+        cout << "Would you like an instructor (y/n)? \n"; 
         cin >> ans;
     
         if (ans == 'y') 
          {
             total += instructor * num;
          }
-    return total;
+    return discount(num, total);
 }
