@@ -88,3 +88,26 @@ double spelunk(int num){
     
     return totalAmount; 
 }
+double climbing(int num)
+{
+    int equipmentRental = 40 * 3;
+    int instructor = 100;    
+    char ans;
+    double total = 350 * num;
+     
+     cout << "Would you like an instructor (y/n) \n" << endl;
+     cin >> ans;
+     
+     if(ans == 'y')
+    {
+        total +=  instructor  * num;     
+    }
+    cout << " Would you like equipment (y/n)\n" << endl;
+    cin >> ans;
+    if (ans == 'y')
+    {
+        total += equipmentRental * num;
+    }
+    
+    return total;
+}
