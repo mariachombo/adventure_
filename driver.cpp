@@ -23,7 +23,28 @@ int main()
     cout << "How many people are you planning on taking with you? ";
     cin >> num;
     char choice = menu();
-
+    cout << "\nThank you for choosing!\n    Now we will calculate the price.\n";
+    if(choice == 'D' || choice == 'd')
+    {
+         price = climbing(num);
+         cout << "Your total is: $ " << price;
+    }
+    else if( choice == 'B' || choice == 'b')
+    {
+        price = scuba(num);
+        cout << "Your total is: $ " << price;
+    }
+    else if( choice == 'C' || choice == 'c')
+    {
+        price = skyDive(num);
+        cout << "Your total is: $ " << price;
+    }
+    else if( choice == 'S' || choice == 's')
+    {
+        price = spelunk(num);
+        cout << "Your total is: $ " << price;
+    }
+    cout << "\n\t_____________________________________________________\n\n";
     return 0;   
 }
 
