@@ -115,7 +115,7 @@ double scuba(int num)
 {
     int instructor = 100;
     char ans;
-    double total = 10000 * num;
+    double total = 1000 * num;
     
         cout << "Would you like an instructor (y/n)? \n" << endl; 
         cin >> ans;

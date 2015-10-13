@@ -111,3 +111,18 @@ double climbing(int num)
     
     return total;
 }
+double scuba(int num)
+{
+    int instructor = 100;
+    char ans;
+    double total = 1000 * num;
+    
+        cout << "Would you like an instructor (y/n)? \n" << endl; 
+        cin >> ans;
+    
+        if (ans == 'y') 
+         {
+            total += instructor * num;
+         }
+    return total;
+}
